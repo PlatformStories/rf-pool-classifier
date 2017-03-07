@@ -1,6 +1,6 @@
 {
     "name": "rf-pool-classifier",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Train a random forest classifier to classify polygons in those that contain pools and those that do not.",
     "properties": {
         "isPublic": true,
@@ -37,7 +37,7 @@
         {
             "type": "DOCKER",
             "properties": {
-                "image": "naldeborgh/rf-pool-classifier-docker-image"
+                "image": "platformstories/rf-pool-classifier-docker-image"
             },
             "command": "python /rf-pool-classifier.py",
             "isPublic": true
