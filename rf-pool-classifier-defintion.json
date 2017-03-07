@@ -1,0 +1,46 @@
+{
+    "name": "rf-pool-classifier",
+    "version": "0.0.1",
+    "description": "Train a random forest classifier to classify polygons in those that contain pools and those that do not.",
+    "properties": {
+        "isPublic": true,
+        "timeout": 7200
+    },
+    "inputPortDescriptors": [
+        {
+            "name": "image",
+            "type": "directory",
+            "description": "Contains the image strip where the polygons are found.",
+            "required": true
+        },
+        {
+            "name": "geojson",
+            "type": "directory",
+            "description": "Contains a geojson with labeled polygons. Each polygon has the properties feature_id, image_id, and class_name (either 'No swimming pool' or 'Swimming pool')",
+            "required": true
+        },
+        {
+            "name": "n_estimators",
+            "type": "string",
+            "description": "Number of trees to use in the random forest classifier. Defaults to 100.",
+            "required": false
+        }
+    ],
+    "outputPortDescriptors": [
+        {
+            "name": "trained_classifier",
+            "type": "directory",
+            "description": "Contains the file 'classifier.pkl' which is the trained random forest classifier."
+        }
+    ],
+    "containerDescriptors": [
+        {
+            "type": "DOCKER",
+            "properties": {
+                "image": "naldeborgh/rf-pool-classifier-docker-image"
+            },
+            "command": "python /rf-pool-classifier.py",
+            "isPublic": true
+        }
+    ]
+}
