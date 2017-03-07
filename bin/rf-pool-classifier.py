@@ -46,7 +46,8 @@ class RfPoolClassifier(GbdxTaskInterface):
         os.makedirs(output_dir)
 
         # Get training data from the geojson input
-        train_rasters, _, train_labels = de.get_data('train.geojson', return_labels=True, mask=True)
+        train_rasters, train_labels = de.get_data('train.geojson', return_labels=True,
+                                                  mask=True)
 
         # Compute features from each training polygon
         compute_features = features.pool_basic
