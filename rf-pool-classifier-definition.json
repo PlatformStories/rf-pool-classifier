@@ -1,6 +1,6 @@
 {
     "name": "rf-pool-classifier",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Train a random forest classifier to classify polygons in those that contain pools and those that do not.",
     "properties": {
         "isPublic": true,
