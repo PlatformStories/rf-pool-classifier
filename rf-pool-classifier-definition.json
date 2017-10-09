@@ -3,7 +3,7 @@
     "version": "0.0.4",
     "description": "Train a random forest classifier to classify polygons in those that contain pools and those that do not.",
     "properties": {
-        "isPublic": true,
+        "isPublic": false,
         "timeout": 7200
     },
     "inputPortDescriptors": [
