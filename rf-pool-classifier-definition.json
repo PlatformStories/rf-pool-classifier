@@ -1,6 +1,7 @@
 {
     "name": "rf-pool-classifier",
     "version": "0.0.4",
+    "taskOwnerEmail": "kostas.stamatiou@digitalglobe.com",
     "description": "Train a random forest classifier to classify polygons in those that contain pools and those that do not.",
     "properties": {
         "isPublic": false,
